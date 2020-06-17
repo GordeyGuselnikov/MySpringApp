@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		288E8DF528622BB0FAFE2D4F /* Pods_MySpringApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B321732FDA7E4B4D314817 /* Pods_MySpringApp.framework */; };
 		7283BF34249A031F0061DBB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7283BF33249A031F0061DBB1 /* AppDelegate.swift */; };
 		7283BF36249A031F0061DBB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7283BF35249A031F0061DBB1 /* SceneDelegate.swift */; };
 		7283BF38249A031F0061DBB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7283BF37249A031F0061DBB1 /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		7283BF3C249A03220061DBB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7283BF3F249A03220061DBB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7283BF41249A03220061DBB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3DDC20F4F482737FC0DC7DB /* Pods-MySpringApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpringApp.debug.xcconfig"; path = "Target Support Files/Pods-MySpringApp/Pods-MySpringApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F9B321732FDA7E4B4D314817 /* Pods_MySpringApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySpringApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD54CEE1BD2BE0FA4885040A /* Pods-MySpringApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySpringApp.release.xcconfig"; path = "Target Support Files/Pods-MySpringApp/Pods-MySpringApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288E8DF528622BB0FAFE2D4F /* Pods_MySpringApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53F69E6BB3BBE8218B919AD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9B321732FDA7E4B4D314817 /* Pods_MySpringApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7283BF27249A031F0061DBB1 = {
 			isa = PBXGroup;
 			children = (
 				7283BF32249A031F0061DBB1 /* MySpringApp */,
 				7283BF31249A031F0061DBB1 /* Products */,
+				A1CB50EA6660CDFC62440263 /* Pods */,
+				53F69E6BB3BBE8218B919AD5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = MySpringApp;
 			sourceTree = "<group>";
 		};
+		A1CB50EA6660CDFC62440263 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3DDC20F4F482737FC0DC7DB /* Pods-MySpringApp.debug.xcconfig */,
+				FD54CEE1BD2BE0FA4885040A /* Pods-MySpringApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7283BF44249A03220061DBB1 /* Build configuration list for PBXNativeTarget "MySpringApp" */;
 			buildPhases = (
+				62F7AE80AC4583647348262F /* [CP] Check Pods Manifest.lock */,
 				7283BF2C249A031F0061DBB1 /* Sources */,
 				7283BF2D249A031F0061DBB1 /* Frameworks */,
 				7283BF2E249A031F0061DBB1 /* Resources */,
+				B52EEB84D3915379084757EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62F7AE80AC4583647348262F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MySpringApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B52EEB84D3915379084757EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MySpringApp/Pods-MySpringApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MySpringApp/Pods-MySpringApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MySpringApp/Pods-MySpringApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7283BF2C249A031F0061DBB1 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		7283BF45249A03220061DBB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3DDC20F4F482737FC0DC7DB /* Pods-MySpringApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		7283BF46249A03220061DBB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD54CEE1BD2BE0FA4885040A /* Pods-MySpringApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
